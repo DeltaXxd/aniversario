@@ -2,32 +2,95 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Para mi Dany💜💙</title>
+  <title>💙💜Para mi Dany💜💙</title>
   <link rel="icon" href="corazon.png" type="image/png">
   <style>
     body {
+      background-image: url('lavandas.jpg'); /* 👈 Imagen de fondo */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+
       background-color: #fff0f0;
       font-family: 'Georgia', serif;
       text-align: center;
       padding: 40px;
       color: #800080;
     }
+
     h1 {
       font-size: 48px;
       color: #36064e;
     }
+
     h2 {
       font-size: 36px;
       margin-top: 0;
     }
+
     p {
       font-size: 28px;
       margin: 20px auto;
       max-width: 800px;
     }
+
+    /* 💜 Animación de corazones */
+    .corazones {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .corazones::before {
+      content: "💜💙💜💙💜💙";
+      font-size: 24px;
+      position: absolute;
+      animation: flotar 8s linear infinite;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes flotar {
+      0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-50%) translateY(-120vh);
+        opacity: 0;
+      }
+    }
+
+    /* 💜 Botón */
+    button {
+      padding: 12px 24px;
+      font-size: 20px;
+      border-radius: 12px;
+      background-color: #800080;
+      color: white;
+      border: none;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+
+    em {
+      font-style: italic;
+      font-size: 24px;
+      display: block;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
+
+  <div class="corazones"></div>
 
   <h1>Feliz aniversario 💙💜</h1>
   <h2>💜💙</h2>
@@ -35,8 +98,21 @@
   <p>Holaaaa, Danyyy, feliz aniversario.</p>
   <p>Te amo, te amo con todo mi corazón, Dany. En todos estos años, en este año de novios es donde he sido más feliz.eres la mejor novia de todas las que han existido, mi amor por ti es tan sincero y grande, eres perfecta Dany, gracias de verdad por todo la felicidad que me haz dado estoy muy comodo contigo y deseo con todo mi ser, seguir esta relacion, por muchisisisisimos, años mas hasta que seamos viejos, y tengamos hijos y si se puede nietos. mis sentimientos son sinceros y bonitos hcia a ti, y te lo estoy demostrando con esta pagina, aun que no sea tan grande o algo con tantos detalles, estuve aprendiendo a hacerlas, por que lo hice? por que queria darte algo bonito y especial para ti, por que asi como tu eres especial para mi, queria darte asi de especial, de verdad te amo y feliz aniversario. te amo, Dany💜💙
   </p>
-<img src="beso.png" alt="mi foto" style="width: 500px; border-radius: 50px;">
+  
+  <img src="beso.png" alt="mi foto" style="width: 300px; border-radius: 50px;">
+  <img src="beso2.jpg" alt="mi foto" style="width: 300px; border-radius: 50px;">
+
+  <br>
+
+  <button onclick="mensaje()">Haz clic si me amas 💜</button>
+
+  <em>"mi vida se llama.. Dany 💙💜"</em>
+
+  <script>
+    function mensaje() {
+      alert("¡Yo también te amo muchísimo, Dany! 💜💙");
+    }
+  </script>
 
 </body>
 </html>
-
